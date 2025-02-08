@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS alx_book_store;
 CREATE TABLE Authors(
 	author_id INT PRIMARY KEY AUTO_INCREMENT,
     author_name VARCHAR(215)
@@ -25,11 +26,11 @@ CREATE TABLE Orders(
     order_date DATE
 );
 
-CREATE TABLE Oder_dails(
-	order_detali_id INT PRIMARY KEY AUTO_INCREMENT,
-    author_id INT,
-    customer_id INT,
-    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
-    FOREIGN KEY (author_id) REFERENCES Authors(author_id),
+CREATE TABLE Order_Details(
+	order_detail_id INT PRIMARY KEY AUTO_INCREMENT,
+    book_id INT,
+    order_id INT,
+    FOREIGN KEY (book_id) REFERENCES Books(book_id),
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     quantity DOUBLE
 );
