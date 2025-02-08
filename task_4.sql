@@ -1,3 +1,5 @@
-USE alx_book_store;
--- 1. show books with the following columns:
-SHOW COLUMNS FROM books;
+
+SELECT COLUMN_NAME, COLUMN_TYPE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_SCHEMA = 'alx_bookstore' AND 
+TABLE_NAME = 'books';
