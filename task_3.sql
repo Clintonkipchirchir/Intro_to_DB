@@ -1,3 +1,3 @@
-USE task_2;
+USE alx_book_store;
 
 SHOW TABLES;
