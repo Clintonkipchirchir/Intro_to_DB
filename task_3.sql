@@ -1,0 +1,3 @@
+USE task_2;
+
+SHOW TABLES;
