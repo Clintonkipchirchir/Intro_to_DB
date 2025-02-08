@@ -12,8 +12,8 @@ try:
     cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
     print("Database 'alx_book_store' created successfully!")
 
-except Exception:
-    print("Database 'alx_book_store' already exists!")
+except mysql.connector.Error as err:
+    print("Failed creating database: {}".format(err))
 
 else:
     mydb.close()
